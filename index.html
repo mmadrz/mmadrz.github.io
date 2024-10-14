@@ -265,9 +265,9 @@
       <!-- Additional Python and Earth Engine Information -->
       <br><br>
       <!-- Python and Earth Engine Matrix -->
-      <div class="row mt-3">
+      <div class="d-flex justify-content-center"> <!-- Added flex utilities to center the row -->
         <!-- Python Information -->
-        <div class="col-md-8">
+        <div class="col-md-9">
           <h3>Python</h3>
           <table class="table">
             <tbody>
@@ -300,7 +300,7 @@
         </div>
 
         <!-- Earth Engine Information -->
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h3>Google Earth Engine</h3>
           <table class="table">
             <tbody>
@@ -482,7 +482,7 @@
             </div>
           </div>
           <br>
-          <img src="images/portfolio/PaRaVis.jpg" alt="PaRaVis" class="img-responsive" style="width: 100%; max-width: 600px;" />
+          <img src="images/portfolio/PaRaVis.jpg" alt="PaRaVis" class="img-responsive" style="display: block; margin: 0 auto; width: 100%; max-width: 600px;" />
           <br>
           <p style="text-align: justify;">
             <strong>Article</strong><br>
@@ -619,119 +619,170 @@
 
 
 
-<!--Achivments-->
+<!-- Achievements -->
 <section id="portfolio" class="page-section section appear clearfix secPad">
   <div class="container">
     <div class="row">
-      <nav id="filter" class="col-md-12">
-        <ul>
+      <nav id="filter" class="col-md-12 text-center">
+        <ul class="list-inline">
           <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
           <li><a href="#" class="btn-theme btn-small" data-filter=".Ecology">Ecology</a></li>
           <li><a href="#" class="btn-theme btn-small" data-filter=".Programming">Programming</a></li>
           <li><a href="#" class="btn-theme btn-small" data-filter=".TimeSeries">Time Series</a></li>
-
         </ul>
       </nav>
       <div class="col-md-12">
         <div class="row">
           <div class="portfolio-items isotopeWrapper clearfix" id="3">
-            <article class="col-sm-4 isotopeItem Ecology">
-              <div class="portfolio-item"> <img src="images/achievement/img1.jpg" alt="" />
+            
+            <!-- Each item uses col-12 for mobile, col-sm-6 for small devices, and col-md-4 for larger screens -->
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem Ecology">
+              <div class="portfolio-item">
+                <img src="images/achievement/img1.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img1.jpg" class="fancybox">
-                    <h5>Ecology: Ecosystem Dynamics and Conservation</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img1.jpg" class="fancybox">
+                      <h5>Ecology: Ecosystem Dynamics and Conservation</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="col-sm-4 isotopeItem Ecology">
-              <div class="portfolio-item"> <img src="images/achievement/img2.jpg" alt="" />
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem Ecology">
+              <div class="portfolio-item">
+                <img src="images/achievement/img2.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img2.jpg" class="fancybox">
-                    <h5>Aeroecology: Exploring Biodiversity with Radar</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img2.jpg" class="fancybox">
+                      <h5>Aeroecology: Exploring Biodiversity with Radar</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="col-sm-4 isotopeItem Programming">
-              <div class="portfolio-item"> <img src="images/achievement/img3.jpg" alt="" />
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem Programming">
+              <div class="portfolio-item">
+                <img src="images/achievement/img3.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img3.jpg" class="fancybox">
-                    <h5>Programming for Everybody (Getting Started with
-                      Python)</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img3.jpg" class="fancybox">
+                      <h5>Programming for Everybody (Getting Started with Python)</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="col-sm-4 isotopeItem MLNN">
-              <div class="portfolio-item"> <img src="images/achievement/img4.jpg" alt="" />
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem MLNN">
+              <div class="portfolio-item">
+                <img src="images/achievement/img4.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img4.jpg" class="fancybox">
-                    <h5>
-                      Supervised Machine Learning: Regression and Classification</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img4.jpg" class="fancybox">
+                      <h5>Supervised Machine Learning: Regression and Classification</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="col-sm-4 isotopeItem Programming">
-              <div class="portfolio-item"> <img src="images/achievement/img5.jpg" alt="" />
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem Programming">
+              <div class="portfolio-item">
+                <img src="images/achievement/img5.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img5.jpg" class="fancybox">
-                    <h5>ChatGPT for Data Science and Machine Learning</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img5.jpg" class="fancybox">
+                      <h5>ChatGPT for Data Science and Machine Learning</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="col-sm-4 isotopeItem TimeSeries">
-              <div class="portfolio-item"> <img src="images/achievement/img6.jpg" alt="" />
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem TimeSeries">
+              <div class="portfolio-item">
+                <img src="images/achievement/img6.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img6.jpg" class="fancybox">
-                    <h5>Time Series Analysis and Forecasting using Python</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img6.jpg" class="fancybox">
+                      <h5>Time Series Analysis and Forecasting using Python</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="col-sm-4 isotopeItem Programming">
-              <div class="portfolio-item"> <img src="images/achievement/img7.jpg" alt="" />
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem Programming">
+              <div class="portfolio-item">
+                <img src="images/achievement/img7.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img7.jpg" class="fancybox">
-                    <h5>Image Recognition for Beginners using CNN in R Studio</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img7.jpg" class="fancybox">
+                      <h5>Image Recognition for Beginners using CNN in R Studio</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="col-sm-4 isotopeItem Programming">
-              <div class="portfolio-item"> <img src="images/achievement/img8.jpg" alt="" />
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem Programming">
+              <div class="portfolio-item">
+                <img src="images/achievement/img8.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img8.jpg" class="fancybox">
-                    <h5>Mastering Data Visualization with Python using Seaborn Lib.</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img8.jpg" class="fancybox">
+                      <h5>Mastering Data Visualization with Python using Seaborn Lib.</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
-            <article class="col-sm-4 isotopeItem Programming">
-              <div class="portfolio-item"> <img src="images/achievement/img9.jpg" alt="" />
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem Programming">
+              <div class="portfolio-item">
+                <img src="images/achievement/img9.jpg" alt="" class="img-fluid" />
                 <div class="portfolio-desc align-center">
-                  <div class="folio-info"> <a href="images/achievement/img9.jpg" class="fancybox">
-                    <h5>Python for Scientific Research: From Beginner to Advanced</h5>
-                    <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
+                  <div class="folio-info">
+                    <a href="images/achievement/img9.jpg" class="fancybox">
+                      <h5>Python for Scientific Research: From Beginner to Advanced</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
                 </div>
-            </div>
-          </article>
-          <article class="col-sm-4 isotopeItem Programming">
-            <div class="portfolio-item"> <img src="images/achievement/img10.jpg" alt="" />
-              <div class="portfolio-desc align-center">
-                <div class="folio-info"> <a href="images/achievement/img10.jpg" class="fancybox">
-                  <h5>The Ultimate Python Primer: Learn the Basics with ChatGPT</h5>
-                  <i class="fa fa-plus-square-o fa-2x"></i></a> </div>
               </div>
             </article>
+
+            <article class="col-12 col-sm-6 col-md-4 isotopeItem Programming">
+              <div class="portfolio-item">
+                <img src="images/achievement/img10.jpg" alt="" class="img-fluid" />
+                <div class="portfolio-desc align-center">
+                  <div class="folio-info">
+                    <a href="images/achievement/img10.jpg" class="fancybox">
+                      <h5>The Ultimate Python Primer: Learn the Basics with ChatGPT</h5>
+                      <i class="fa fa-plus-square-o fa-2x"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- References Section -->
 <section id="reference" class="secPad">
