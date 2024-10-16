@@ -161,7 +161,7 @@
   top: -10px;  /* Adjust position to move bubble higher */
   left: 200px; /* Adjust position to move bubble left */
   background: white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -176,7 +176,7 @@
   word-wrap: break-word;
   overflow: hidden;
   white-space: normal; /* Allow text to wrap inside the bubble */
-  border-right: 3px solid black; /* Creates the typing cursor */
+  border-left: 4px solid black; /* Creates the typing cursor */
   z-index: 1; /* Ensure it appears above the image */
   transition: all 0.3s ease;
   border: 4px solid #ffffff; /* Add a border with color */
@@ -210,7 +210,7 @@
   .typing {
     white-space: normal; /* Allow wrapping */
     overflow: hidden;
-    border-right: 3px solid black;
+    border-left: 3px solid black;
     animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
   }
 
@@ -234,7 +234,7 @@
     const profileImage = document.getElementById('profileImage');
     const bubble = document.getElementById('thoughtBubble');
     const aboutMeSection = document.getElementById('aboutMe');
-    const text = "Currently, I am seeking new opportunities";
+    const text = "Open to new opportunities in ecological remote sensing";
 
     let index = 0;
 
@@ -257,7 +257,7 @@
         setTimeout(typeText, 100); // Adjust typing speed (in ms)
       } else {
         // Remove cursor once typing is finished
-        bubble.style.borderRight = 'none';
+        bubble.style.borderLeft = 'none';
       }
     }
 
@@ -267,7 +267,7 @@
       bubble.style.display = 'flex'; // Display the bubble as a flexbox for centering text
       index = 0;
       bubble.innerHTML = ''; // Reset the bubble text
-      bubble.style.borderRight = '3px solid black'; // Add back the cursor
+      bubble.style.borderLeft = '6px solid #FF7A00'; // Add back the cursor
       typeText(); // Start typing effect
     });
 
