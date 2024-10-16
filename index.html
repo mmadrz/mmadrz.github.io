@@ -77,24 +77,64 @@
     <div class="row"> 
       <!-- item -->
 
-      <img src="images/Me.jpg" alt="me" style="width: 30%; height: 35%; border-radius: 50%; border: 5px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
-
-      <div class="col-md-8 tileBox">
-        <div class="txtHead">
+      <div class="col-md-4 tileBox" style="position: relative;"> 
+        <img src="images/Me.jpg" alt="me" style="width: 315px; height: 300px; border-radius: 50%; border: 5px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
+        
+        <!-- Thought bubble -->
+        <div class="thought-bubble">
+          Currently, I am seeking new opportunities
         </div>
+      </div>
+      
+      <div class="col-md-8 tileBox">
+        <div class="txtHead"></div>
         <br> <!-- Add an empty space-->
         <br> <!-- Add an empty space-->
-
+      
         <p style="font-weight: 590; line-height: 2.2; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); text-align: justify; font-size: 15px;">
           I hold a master's degree in remote sensing from <a href="https://en.kntu.ac.ir/" target="_blank">
           K.N. Toosi University of Technology</a>. 
           My passion lies in leveraging remote sensing technologies and datasets to monitor forests,
-           which are vital to terrestrial ecosystems and play a crucial role in resilience against climate change and biodiversity loss.
-           I am particularly focused on utilizing open-source datasets and applying physical models to address environmental challenges.
-            Currently, I am seeking new opportunities to further contribute to sustainable forest management and environmental conservation efforts.
+          which are vital to terrestrial ecosystems and play a crucial role in resilience against climate change and biodiversity loss.
+          I am particularly focused on utilizing open-source datasets and applying physical models to address environmental challenges.
         </p>
         <br> <!-- Add an empty space-->
         <br> <!-- Add an empty space-->
+      </div>
+      
+      <!-- CSS for Thought Bubble -->
+      <style>
+        .thought-bubble {
+          position: absolute;
+          top: 10px;  /* Adjust position based on where you want the bubble */
+          right: -50px; /* Adjust this for fine-tuning */
+          background: white;
+          padding: 10px 15px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          font-size: 14px;
+          font-weight: bold;
+          max-width: 200px;
+          text-align: center;
+          z-index: 1; /* Ensure it appears above the image */
+        }
+      
+        /* Optional: You can add the 'thought bubble tail' */
+        .thought-bubble::after {
+          content: '';
+          position: absolute;
+          top: 80%; /* Adjust based on position */
+          left: -15px;
+          width: 0;
+          height: 0;
+          border: 10px solid transparent;
+          border-right-color: white;
+          border-left: 0;
+          border-bottom: 0;
+          margin-top: -5px;
+        }
+      </style>
+      
 
 
 
