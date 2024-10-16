@@ -28,6 +28,8 @@
 <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 
+
+
 <body>
 <header class="header">
   <div class="container">
@@ -67,7 +69,8 @@
 <br> <!-- Add an empty space-->
 <br> <!-- Add an empty space-->
 
-<!-- About -->
+
+<!-- About Me Section -->
 <section id="aboutMe">
   <br> <!-- Add an empty space-->
   <br> <!-- Add an empty space-->
@@ -75,23 +78,20 @@
 
   <div class="container">
     <div class="row"> 
-      <!-- item -->
-
+      <!-- Image and thought bubble -->
       <div class="col-md-4 tileBox" style="position: relative;"> 
-        <img src="images/Me.jpg" alt="me" style="width: 315px; height: 300px; border-radius: 50%; border: 5px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"/>
+        <img id="profileImage" src="images/Me.jpg" alt="me" style="width: 315px; height: 300px; border-radius: 50%; border: 5px solid white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); cursor: pointer;">
         
-        <!-- Thought bubble -->
-        <div class="thought-bubble">
-          Currently, I am seeking new opportunities
-        </div>
+        <!-- Circular thought bubble with typing effect -->
+        <div class="thought-bubble" id="thoughtBubble" style="display: none;"></div>
       </div>
-      
+
       <div class="col-md-8 tileBox">
         <div class="txtHead"></div>
         <br> <!-- Add an empty space-->
         <br> <!-- Add an empty space-->
-      
-        <p style="font-weight: 590; line-height: 2.2; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); text-align: justify; font-size: 15px;">
+
+        <p style="font-weight: 590; line-height: 2.2; box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); text-align: justify; font-size: 16px;">
           I hold a master's degree in remote sensing from <a href="https://en.kntu.ac.ir/" target="_blank">
           K.N. Toosi University of Technology</a>. 
           My passion lies in leveraging remote sensing technologies and datasets to monitor forests,
@@ -100,43 +100,6 @@
         </p>
         <br> <!-- Add an empty space-->
         <br> <!-- Add an empty space-->
-      </div>
-      
-      <!-- CSS for Thought Bubble -->
-      <style>
-        .thought-bubble {
-          position: absolute;
-          top: 10px;  /* Adjust position based on where you want the bubble */
-          right: -50px; /* Adjust this for fine-tuning */
-          background: white;
-          padding: 10px 15px;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          font-size: 14px;
-          font-weight: bold;
-          max-width: 200px;
-          text-align: center;
-          z-index: 1; /* Ensure it appears above the image */
-        }
-      
-        /* Optional: You can add the 'thought bubble tail' */
-        .thought-bubble::after {
-          content: '';
-          position: absolute;
-          top: 80%; /* Adjust based on position */
-          left: -15px;
-          width: 0;
-          height: 0;
-          border: 10px solid transparent;
-          border-right-color: white;
-          border-left: 0;
-          border-bottom: 0;
-          margin-top: -5px;
-        }
-      </style>
-      
-
-
 
         <table style="width: 100%;">
           <tr>
@@ -172,27 +135,156 @@
             </td>
           </tr>
         </table>
-        
-        <!-- Add this CSS for hover effect -->
-        <style>
-          .logo {
-            transition: transform 0.3s ease;
-          }
-        
-          .logo:hover {
-            transform: scale(2.5);
-          }
-        </style>
+      </div>
 
-        
-        <!-- Download CV link -->
-        
-      </div>        
-      <!-- end: --> 
-    </div>
+      <!-- Add this CSS for hover effect -->
+      <style>
+        .logo {
+          transition: transform 0.3s ease;
+        }
+      
+        .logo:hover {
+          transform: scale(2.5);
+        }
+      </style>
+      
+    </div>        
+    <!-- end: --> 
   </div>
   <br><br><br><br>
 </section>
+
+<!-- CSS for Circular Thought Bubble with Typing Effect and Sneeze Animation -->
+<style>
+.thought-bubble {
+  position: absolute;
+  top: -10px;  /* Adjust position to move bubble higher */
+  left: 200px; /* Adjust position to move bubble left */
+  background: white;
+  padding: 20px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: normal; /* Allow text to wrap inside the bubble */
+  border-right: 3px solid black; /* Creates the typing cursor */
+  z-index: 1; /* Ensure it appears above the image */
+  transition: all 0.3s ease;
+  border: 4px solid #ffffff; /* Add a border with color */
+}
+
+  /* Optional: You can add the 'thought bubble tail' */
+  .thought-bubble::after {
+    content: '';
+    position: absolute;
+    top: 80%; /* Adjust based on position */
+    left: -15px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: white;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -5px;
+  }
+
+  /* Typing effect */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  .typing {
+    white-space: normal; /* Allow wrapping */
+    overflow: hidden;
+    border-right: 3px solid black;
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  }
+
+  /* Sneeze animation */
+  @keyframes sneeze {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    20%, 80% {
+      transform: translateX(-10px);
+    }
+    40%, 60% {
+      transform: translateX(10px);
+    }
+  }
+</style>
+
+<!-- JavaScript for Typing Effect, Bubble Display on Click, and Triggering Sneeze on Scroll -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const profileImage = document.getElementById('profileImage');
+    const bubble = document.getElementById('thoughtBubble');
+    const aboutMeSection = document.getElementById('aboutMe');
+    const text = "Currently, I am seeking new opportunities";
+
+    let index = 0;
+
+    // Function to check if the "About Me" section is in view
+    function isInView() {
+      const rect = aboutMeSection.getBoundingClientRect();
+      return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    }
+
+    // Function to start the sneeze animation
+    function startSneeze() {
+      profileImage.style.animation = 'sneeze 1s ease-in-out 3';
+    }
+
+    // Function to type the text in the bubble
+    function typeText() {
+      if (index < text.length) {
+        bubble.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeText, 100); // Adjust typing speed (in ms)
+      } else {
+        // Remove cursor once typing is finished
+        bubble.style.borderRight = 'none';
+      }
+    }
+
+    // Event listener for when the user clicks on the image
+    profileImage.addEventListener('click', function() {
+      // Show the bubble when the image is clicked
+      bubble.style.display = 'flex'; // Display the bubble as a flexbox for centering text
+      index = 0;
+      bubble.innerHTML = ''; // Reset the bubble text
+      bubble.style.borderRight = '3px solid black'; // Add back the cursor
+      typeText(); // Start typing effect
+    });
+
+    // Event listener for scrolling to trigger the sneeze animation when the "About Me" section is in view
+    window.addEventListener('scroll', function() {
+      if (isInView()) {
+        startSneeze();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
 
 
 <!--Quote-->
