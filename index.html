@@ -241,10 +241,13 @@
 
     let index = 0;
 
-    // Function to check if the "About Me" section is in view
+    // Function to check if at least 50% of the "About Me" section is in view
     function isInView() {
       const rect = aboutMeSection.getBoundingClientRect();
-      return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const isVisible = rect.top < windowHeight && rect.bottom > 0; // Check if it's in the viewport
+      const isHalfVisible = rect.top + (rect.height / 2) < windowHeight && rect.bottom - (rect.height / 2) > 0; // Check if at least 50% is visible
+      return isVisible && isHalfVisible;
     }
 
     // Function to start the sneeze animation
@@ -274,7 +277,7 @@
       typeText(); // Start typing effect
     });
 
-    // Event listener for scrolling to trigger the sneeze animation when the "About Me" section is in view
+    // Event listener for scrolling to trigger the sneeze animation when at least 50% of the "About Me" section is in view
     window.addEventListener('scroll', function() {
       if (isInView()) {
         startSneeze();
